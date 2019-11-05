@@ -1,0 +1,11 @@
+---
+- name: Enable to install ruby
+  shell: "amazon-linux-extras enable ruby2.6"
+  tags: ruby
+
+- name: Install yum ruby
+  yum:
+    name: ruby
+    state: installed
+    lock_timeout: 180
+  tags: ruby
